@@ -1,135 +1,131 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\c003f0ce1f321000c10be9414caeda42\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ed0a4c34d27362208915901d6a135553\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\8b02373264031ad09a3ab5df6ca9fd49\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\346f9dab14334c59d8f239b2bdadae2a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\19fe04a4e6765a2f823880b25baea39e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f64d0b603a6db7e9a6827677b9348bf5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\98b69cee6c99dc56aac82083e419f1d8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\3eb853adb4562e392a0ae20b3b09b0dc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0dcc800a396f944329b3e47778a50f0d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7903905ebe1313a919907837dd633314\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\714b5eba81ae5f3c52a2a18008a32f4c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5029be454a6c3c40da1cc4957cdc6953\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a2857c8cdc7cec6a403b4ee6fc8064bb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5ae36f681e536a3b4bd9cf4beae05535\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6bb51bd577d1581e0d4b5e7ff8e355d6\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\468be5e4aa0aa90bf1c144e4be21cb8d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5aebed8a2c865bd9432c32cd0ea39664\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\084caeadda9e88b6ff8bd6ef5822e441\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\764ca96f3483bd2ce19e8cca17b5f248\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\61bdc0ef2dd17a711ae837321c871939\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\bd2981019d2e850f719020217aefa5f0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b7052e2c13f1ad416e495736643a5250\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6eb5a3acbfa94b5443bc91a6d59315af\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\a2e3b45dcf3ea074efd665aef60a5ae9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\75a989128100cc12a88febd32279fc9a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\904f9b6a2cf21faa3206aa0180655e7e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b9f7ff0687a9bf6f4fb68141acfa9612\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\4583a663da2a960c5a82549823931160\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\33604ae84cd65df0895f33a7f8320a7e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\e1ef123e8245ccc678b6c26fc12d7b14\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d5b65145addab725cae71346edde418a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d71aa8cb562821a1f14776334ff32a4a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ec061b4754944ca5256c02ae4734f054\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7d69f1564fe5b2b4c18d2c09d310b762\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1adc4278ad852f2e82e79265c5d361b4\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f91e922ed3191acf8e5f59831cf3878b\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:3:5-47
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:7:5-24:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\8b02373264031ad09a3ab5df6ca9fd49\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\8b02373264031ad09a3ab5df6ca9fd49\AndroidManifest.xml:9:5-20
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:7:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\bd2981019d2e850f719020217aefa5f0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\bd2981019d2e850f719020217aefa5f0\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:8:9-65
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:8:9-65
 activity#com.example.bahroel.spk.activity.HomeActivity
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:15:9-17:20
 	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:15:19-47
+activity#com.example.bahroel.spk.activity.MainActivity
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:18:9-23:20
+	android:name
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:18:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:19:27-74
-activity#com.example.bahroel.spk.activity.WarehouseSourceActivity
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:22:9-61
-	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:22:19-58
-activity#com.example.bahroel.spk.activity.WarehouseDestinationActivity
-ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:23:9-66
-	android:name
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml:23:19-63
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\c003f0ce1f321000c10be9414caeda42\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\c003f0ce1f321000c10be9414caeda42\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ed0a4c34d27362208915901d6a135553\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\ed0a4c34d27362208915901d6a135553\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\8b02373264031ad09a3ab5df6ca9fd49\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\8b02373264031ad09a3ab5df6ca9fd49\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\346f9dab14334c59d8f239b2bdadae2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\346f9dab14334c59d8f239b2bdadae2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\19fe04a4e6765a2f823880b25baea39e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\19fe04a4e6765a2f823880b25baea39e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f64d0b603a6db7e9a6827677b9348bf5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f64d0b603a6db7e9a6827677b9348bf5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\98b69cee6c99dc56aac82083e419f1d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\98b69cee6c99dc56aac82083e419f1d8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\3eb853adb4562e392a0ae20b3b09b0dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\3eb853adb4562e392a0ae20b3b09b0dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0dcc800a396f944329b3e47778a50f0d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\0dcc800a396f944329b3e47778a50f0d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7903905ebe1313a919907837dd633314\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7903905ebe1313a919907837dd633314\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\714b5eba81ae5f3c52a2a18008a32f4c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\714b5eba81ae5f3c52a2a18008a32f4c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5029be454a6c3c40da1cc4957cdc6953\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\5029be454a6c3c40da1cc4957cdc6953\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a2857c8cdc7cec6a403b4ee6fc8064bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a2857c8cdc7cec6a403b4ee6fc8064bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5ae36f681e536a3b4bd9cf4beae05535\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5ae36f681e536a3b4bd9cf4beae05535\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6bb51bd577d1581e0d4b5e7ff8e355d6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6bb51bd577d1581e0d4b5e7ff8e355d6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\468be5e4aa0aa90bf1c144e4be21cb8d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\468be5e4aa0aa90bf1c144e4be21cb8d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5aebed8a2c865bd9432c32cd0ea39664\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5aebed8a2c865bd9432c32cd0ea39664\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\084caeadda9e88b6ff8bd6ef5822e441\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Fatkhun\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\084caeadda9e88b6ff8bd6ef5822e441\AndroidManifest.xml:20:5-44
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\764ca96f3483bd2ce19e8cca17b5f248\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\764ca96f3483bd2ce19e8cca17b5f248\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\61bdc0ef2dd17a711ae837321c871939\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\61bdc0ef2dd17a711ae837321c871939\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\bd2981019d2e850f719020217aefa5f0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\bd2981019d2e850f719020217aefa5f0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b7052e2c13f1ad416e495736643a5250\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b7052e2c13f1ad416e495736643a5250\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6eb5a3acbfa94b5443bc91a6d59315af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6eb5a3acbfa94b5443bc91a6d59315af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\a2e3b45dcf3ea074efd665aef60a5ae9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\a2e3b45dcf3ea074efd665aef60a5ae9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\75a989128100cc12a88febd32279fc9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\75a989128100cc12a88febd32279fc9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\904f9b6a2cf21faa3206aa0180655e7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\904f9b6a2cf21faa3206aa0180655e7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b9f7ff0687a9bf6f4fb68141acfa9612\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\b9f7ff0687a9bf6f4fb68141acfa9612\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\4583a663da2a960c5a82549823931160\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\4583a663da2a960c5a82549823931160\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\33604ae84cd65df0895f33a7f8320a7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\33604ae84cd65df0895f33a7f8320a7e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\e1ef123e8245ccc678b6c26fc12d7b14\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\e1ef123e8245ccc678b6c26fc12d7b14\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d5b65145addab725cae71346edde418a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\d5b65145addab725cae71346edde418a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d71aa8cb562821a1f14776334ff32a4a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d71aa8cb562821a1f14776334ff32a4a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ec061b4754944ca5256c02ae4734f054\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ec061b4754944ca5256c02ae4734f054\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7d69f1564fe5b2b4c18d2c09d310b762\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\7d69f1564fe5b2b4c18d2c09d310b762\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1adc4278ad852f2e82e79265c5d361b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1adc4278ad852f2e82e79265c5d361b4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f91e922ed3191acf8e5f59831cf3878b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Bahroel\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f91e922ed3191acf8e5f59831cf3878b\AndroidManifest.xml:20:5-44
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		ADDED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
-		INJECTED from F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Kuliah\SPK\app\src\main\AndroidManifest.xml

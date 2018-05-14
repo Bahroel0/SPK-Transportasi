@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="F:\File\SM 4\Sistem Pendukung Keputusan\SPK-Transportasi\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Android\Kuliah\SPK\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\Android\Kuliah\SPK\app\src\debug\jniLibs"/></dataSet></merger>
