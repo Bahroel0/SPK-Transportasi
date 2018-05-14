@@ -1,45 +1,62 @@
 package com.example.bahroel.spk.activity;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.bahroel.spk.activity.R;
+import com.example.bahroel.spk.adapters.RealmWarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.RealmWarehouseSourceAdapter;
+import com.example.bahroel.spk.adapters.ViewPagerDestinationAdapter;
+import com.example.bahroel.spk.adapters.ViewPagerSourceAdapter;
+import com.example.bahroel.spk.adapters.WarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.WarehouseSourceAdapter;
 import com.example.bahroel.spk.app.Prefs;
+import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 import com.example.bahroel.spk.realm.RealmController;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class HomeActivity extends AppCompatActivity {
-
     private WarehouseSourceAdapter adapter;
     private Realm realm;
     private FloatingActionButton fabmain;
     private LayoutInflater inflater;
     private RecyclerView recycler;
+
+    ViewPager viewPager;
+    int images[] = {R.drawable.imgasal, R.drawable.imgtujuan};
+    ViewPagerSourceAdapter viewpagersourceadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+
+        viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
+        viewPager.setAdapter(viewpagersourceadapter);
+
         fabmain = (FloatingActionButton) findViewById(R.id.fabmain);
-        recycler = (RecyclerView) findViewById(R.id.recycler);
+        recycler = (RecyclerView) findViewById(R.id.recyclerSrc);
 
         //get realm instance
         this.realm = RealmController.with(this).getRealm();
@@ -76,7 +93,7 @@ public class HomeActivity extends AppCompatActivity {
 
                                 WarehouseSource warehouseSource = new WarehouseSource();
                                 //book.setId(RealmController.getInstance().getBooks().size() + 1);
-                                warehouseSource.setId(RealmController.getInstance().getwhsources().size() + System.currentTimeMillis());
+                                warehouseSource.setId(RealmController.getInstance().getwhdestinations().size() + System.currentTimeMillis());
                                 warehouseSource.setSourceName(editName.getText().toString());
                                 warehouseSource.setSourceAmount(editAmount.getText().toString());
 
@@ -133,40 +150,45 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setRealmData() {
 
-        ArrayList<WarehouseSource> whsource = new ArrayList<>();
+        ArrayList<WarehouseSource> whsources = new ArrayList<>();
 
         WarehouseSource whsrc = new WarehouseSource();
         whsrc.setId(1 + System.currentTimeMillis());
-        whsrc.setSourceName("Reto Meier");
+        whsrc.setSourceName("PT SAWIT");
         whsrc.setSourceAmount("4");
-        whsource.add(whsrc);
+        whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(2 + System.currentTimeMillis());
-        whsrc.setSourceName("Meier");
+        whsrc.setSourceName("PT KELAPA MUDA");
         whsrc.setSourceAmount("5");
-        whsource.add(whsrc);
+        whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(3 + System.currentTimeMillis());
-        whsrc.setSourceName("Meer");
-        whsrc.setSourceAmount("6");
-        whsource.add(whsrc);
+        whsrc.setSourceName("PT MUDA");
+        whsrc.setSourceAmount("5");
+        whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(4 + System.currentTimeMillis());
-        whsrc.setSourceName("Meie");
-        whsrc.setSourceAmount("55");
-        whsource.add(whsrc);
+        whsrc.setSourceName("PT KELAPA");
+        whsrc.setSourceAmount("6");
+        whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(5 + System.currentTimeMillis());
-        whsrc.setSourceName("eier");
+        whsrc.setSourceName("PT IN");
+        whsrc.setSourceAmount("5");
+        whsources.add(whsrc);
+
+        whsrc = new WarehouseSource();
+        whsrc.setId(6 + System.currentTimeMillis());
+        whsrc.setSourceName("PT KAPAL");
         whsrc.setSourceAmount("9");
-        whsource.add(whsrc);
+        whsources.add(whsrc);
 
-
-        for (WarehouseSource whs : whsource) {
+        for (WarehouseSource whs : whsources) {
             // Persist your data easily
             realm.beginTransaction();
             realm.copyToRealm(whs);
@@ -176,5 +198,4 @@ public class HomeActivity extends AppCompatActivity {
         Prefs.with(this).setPreLoad(true);
 
     }
-
 }

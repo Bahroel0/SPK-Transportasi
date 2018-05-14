@@ -19,4 +19,8 @@ public class MyApplication extends Application {
         Realm.setDefaultConfiguration(realmConfiguration);
 
     }
+
+    public static boolean deleteRealm(RealmConfiguration configuration) {
+        return Realm.deleteRealm(configuration);
+    }
 }

@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.support.v4.app.Fragment;
 
+import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 
 import io.realm.Realm;
@@ -63,13 +64,20 @@ public class RealmController {
 
         realm.beginTransaction();
         realm.clear(WarehouseSource.class);
+        realm.clear(WarehouseDestination.class);
         realm.commitTransaction();
     }
 
-    //find all objects in the Book.class
+    //find all objects in the WarehouseSource.class
     public RealmResults<WarehouseSource> getwhsources() {
 
         return realm.where(WarehouseSource.class).findAll();
+    }
+
+    //find all objects in the WarehouseDestination.class
+    public RealmResults<WarehouseDestination> getwhdestinations() {
+
+        return realm.where(WarehouseDestination.class).findAll();
     }
 
     //query a single item with the given id
@@ -78,10 +86,22 @@ public class RealmController {
         return realm.where(WarehouseSource.class).equalTo("id", id).findFirst();
     }
 
+    //query a single item with the given id
+    public WarehouseDestination getwhdestination(String id) {
+
+        return realm.where(WarehouseDestination.class).equalTo("id", id).findFirst();
+    }
+
     //check if Book.class is empty
     public boolean haswhsources() {
 
         return !realm.allObjects(WarehouseSource.class).isEmpty();
+    }
+
+    //check if Book.class is empty
+    public boolean haswhdestinations() {
+
+        return !realm.allObjects(WarehouseDestination.class).isEmpty();
     }
 
     //query example
@@ -91,6 +111,17 @@ public class RealmController {
                 .contains("SourceName", "Author 0")
                 .or()
                 .contains("SourceAmount", "Realm")
+                .findAll();
+
+    }
+
+    //query example
+    public RealmResults<WarehouseDestination> queryedwhdestinations() {
+
+        return realm.where(WarehouseDestination.class)
+                .contains("DestinationName", "Author 0")
+                .or()
+                .contains("DestinationAmount", "Realm")
                 .findAll();
 
     }
