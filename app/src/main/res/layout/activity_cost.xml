@@ -27,14 +27,32 @@
     </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:layout_below="@+id/toolbar_top"
+        android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/imgbayar"
             android:layout_width="match_parent"
             android:src="@drawable/bayar"
             android:layout_height="130dp" />
-        
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/imgbayar"
+            android:layout_width="wrap_content"
+            android:text="Biaya Trafic :"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayoutBayar"
+        android:layout_below="@+id/relative"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/content_bayar" />
+    </LinearLayout>
 
 
 </RelativeLayout>
