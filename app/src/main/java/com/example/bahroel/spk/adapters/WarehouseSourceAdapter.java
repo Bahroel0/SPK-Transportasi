@@ -51,8 +51,8 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
         final CardViewHolder holder = (CardViewHolder) viewHolder;
 
         // set the title and the snippet
-        holder.textName.setText(warehousesource.getSourceName());
-        holder.textAmount.setText("Jumlah Truk : "+warehousesource.getSourceAmount());
+        holder.textName.setText("Asal : " + warehousesource.getSourceName());
+        holder.textAmount.setText("Jumlah Truk : " + warehousesource.getSourceAmount());
 
         //remove single match from realm
         holder.card.setOnLongClickListener(new View.OnLongClickListener() {

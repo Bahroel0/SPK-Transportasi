@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
@@ -44,7 +45,6 @@ public class CostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cost);
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
-
         recycler = (RecyclerView)findViewById(R.id.recyclerbayar);
         //get realm instance
         this.realm = RealmController.with(this).getRealm();
@@ -91,36 +91,39 @@ public class CostActivity extends AppCompatActivity {
 
         int id = RealmController.getInstance().getCostObject().size();
 //        ArrayList<Cost> whsources = new ArrayList<>();
-
-
+//
+//
 //        whsources.clear();
+////        realm.clear(Cost.class);
 //        Random rand = new Random();
 //
-//        long  n = rand.nextLong() + 1;
+//        long  n = rand.nextLong() * 10;
 //        Cost whsrc = new Cost();
-//        whsrc.setId(id+1 + System.currentTimeMillis());
+//        whsrc.setId(n + System.currentTimeMillis());
 //        whsrc.setSourceName("PT SAWIT");
 //        whsrc.setDestinationName("Pabrik A");
 //        whsrc.setCost(5);
 //        whsources.add(whsrc);
 //
 //        whsrc = new Cost();
-//        whsrc.setId(id+2 + System.currentTimeMillis());
+//        whsrc.setId(n + System.currentTimeMillis());
 //        whsrc.setSourceName("PT SAWITasdasd");
 //        whsrc.setDestinationName("Pabrik b");
 //        whsrc.setCost(5);
 //        whsources.add(whsrc);
-
-
+//
+//
 //
 //        for (Cost whs : whsources) {
 //            // Persist your data easily
 //            realm.beginTransaction();
-//            realm.copyToRealm(whs);
+////            realm.copyToRealm(whs);
+//            realm.copyToRealmOrUpdate(whs);
 //            realm.commitTransaction();
 //        }
 //
 //        Prefs.with(this).setPreLoad(true);
+
 
 
         String[] source = new String[RealmController.getInstance().getwhsources().size()];
@@ -129,11 +132,8 @@ public class CostActivity extends AppCompatActivity {
         Log.d(TAG, "nilai string source : " + String.valueOf(source.length));
 
 
-
-
-
         ArrayList<Cost> costs = new ArrayList<>();
-
+//        int k = 0;
         for(int i=0; i<source.length; i++){
             WarehouseSource warehouseSource = RealmController.getInstance().getwhsources().get(i);
             source[i] = warehouseSource.getSourceName();
@@ -141,13 +141,14 @@ public class CostActivity extends AppCompatActivity {
                 WarehouseDestination warehouseDestination = RealmController.getInstance().getwhdestinations().get(j);
                 destination[j] = warehouseDestination.getDestinationName();
                 Cost cost = new Cost();
-                cost.setId( id + j + 1+ System.currentTimeMillis());
+                cost.setId(id + j + 1 + System.currentTimeMillis());
                 cost.setCost(0);
                 cost.setSourceName(source[i]);
                 cost.setDestinationName(destination[j]);
                 costs.add(cost);
 
             }
+//            k++;
         }
 
         Log.d(TAG,"nilai costs : " + costs.toString());
@@ -156,11 +157,11 @@ public class CostActivity extends AppCompatActivity {
         for (Cost whs : costs) {
             // Persist your data easily
             realm.beginTransaction();
-            realm.copyToRealm(whs);
+//            realm.copyToRealm(whs);
+            realm.copyToRealmOrUpdate(whs);
             realm.commitTransaction();
         }
 
         Prefs.with(this).setPreLoad(true);
-
     }
 }

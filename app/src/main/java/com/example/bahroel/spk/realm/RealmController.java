@@ -6,6 +6,7 @@ import android.app.Application;
 import android.support.v4.app.Fragment;
 
 import com.example.bahroel.spk.model.Cost;
+import com.example.bahroel.spk.model.Generate;
 import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 
@@ -86,6 +87,12 @@ public class RealmController {
     public RealmResults<WarehouseDestination> getwhdestinations() {
 
         return realm.where(WarehouseDestination.class).findAll();
+    }
+
+    //find all objects in the Generate.class
+    public RealmResults<Generate> getGenerates() {
+
+        return realm.where(Generate.class).findAll();
     }
 
     //find all objects in the WarehouseDestination.class

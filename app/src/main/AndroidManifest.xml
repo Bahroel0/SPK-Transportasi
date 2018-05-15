@@ -26,7 +26,8 @@
             android:name=".DestinationActivity"
             android:label="@string/title_activity_destination"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CostActivity"></activity>
+        <activity android:name=".CostActivity" />
+        <activity android:name=".GenerateActivity"></activity>
     </application>
 
 </manifest>

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         cvDestination = (CardView) findViewById(R.id.clickDestination);
         btnClearData = (Button) findViewById(R.id.clearData);
         cvCost = (CardView)findViewById(R.id.clickCost);
+        cvGenerate = (CardView) findViewById(R.id.clickGenerate);
 
         cvCost.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        cvGenerate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cvgrt = new Intent(getApplicationContext(), GenerateActivity.class);
+                cvgrt.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(cvgrt);
+            }
+        });
 
         cvSource.setOnClickListener(new View.OnClickListener() {
             @Override

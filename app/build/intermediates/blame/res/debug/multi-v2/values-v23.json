@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "F:\\File\\SM 4\\Sistem Pendukung Keputusan\\SPK-Transportasi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.1.aar\\6eb5a3acbfa94b5443bc91a6d59315af\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.1.aar\\19fe04a4e6765a2f823880b25baea39e\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ed0a4c34d27362208915901d6a135553\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

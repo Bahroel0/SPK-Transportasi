@@ -47,27 +47,25 @@ public class HomeActivity extends AppCompatActivity {
     private LayoutInflater inflater;
     private RecyclerView recycler;
     private LinearLayout linearLayout;
-    ViewPager viewPager;
 
-    int images[] = {R.drawable.asal1, R.drawable.asal2,R.drawable.asal3};
+    ViewPager viewPager;
+    int images[] = {R.drawable.imgasal, R.drawable.imgtujuan};
     ViewPagerSourceAdapter viewpagersourceadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-//        viewPager = (ViewPager)findViewById(R.id.viewPager);
-        viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
-        for(int image:images){
-            flipperImage(image);
-        }
-
-
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+//        viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
+//        for(int image:images){
+//            flipperImage(image);
+//        }
 
         linearLayout = (LinearLayout)findViewById(R.id.linearLayoutbahroel);
 
-//        viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
-//        viewPager.setAdapter(viewpagersourceadapter);
+        viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
+        viewPager.setAdapter(viewpagersourceadapter);
 
         fabmain = (FloatingActionButton) findViewById(R.id.fabmain);
         recycler = (RecyclerView) findViewById(R.id.recyclerSrc);
@@ -76,9 +74,9 @@ public class HomeActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-//            setRealmData();
-//        }
+        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
+            setRealmData();
+        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -183,39 +181,22 @@ public class HomeActivity extends AppCompatActivity {
 
         WarehouseSource whsrc = new WarehouseSource();
         whsrc.setId(1 + System.currentTimeMillis());
-        whsrc.setSourceName("PT SAWIT");
+        whsrc.setSourceName("Gudang A");
         whsrc.setSourceAmount("4");
         whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(2 + System.currentTimeMillis());
-        whsrc.setSourceName("PT KELAPA MUDA");
+        whsrc.setSourceName("Gudang B");
         whsrc.setSourceAmount("5");
         whsources.add(whsrc);
 
         whsrc = new WarehouseSource();
         whsrc.setId(3 + System.currentTimeMillis());
-        whsrc.setSourceName("PT MUDA");
+        whsrc.setSourceName("Gudang C");
         whsrc.setSourceAmount("5");
         whsources.add(whsrc);
 
-        whsrc = new WarehouseSource();
-        whsrc.setId(4 + System.currentTimeMillis());
-        whsrc.setSourceName("PT KELAPA");
-        whsrc.setSourceAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new WarehouseSource();
-        whsrc.setId(5 + System.currentTimeMillis());
-        whsrc.setSourceName("PT IN");
-        whsrc.setSourceAmount("5");
-        whsources.add(whsrc);
-
-        whsrc = new WarehouseSource();
-        whsrc.setId(6 + System.currentTimeMillis());
-        whsrc.setSourceName("PT KAPAL");
-        whsrc.setSourceAmount("9");
-        whsources.add(whsrc);
 
         for (WarehouseSource whs : whsources) {
             // Persist your data easily
@@ -224,7 +205,7 @@ public class HomeActivity extends AppCompatActivity {
             realm.commitTransaction();
         }
 
-        Prefs.with(this).setPreLoad(false);
+        Prefs.with(this).setPreLoad(true);
 
     }
 

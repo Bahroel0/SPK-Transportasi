@@ -51,8 +51,8 @@ public class WarehouseDestinationAdapter extends RealmRecyclerViewAdapter<Wareho
         final WarehouseDestinationAdapter.CardViewHolder holder = (WarehouseDestinationAdapter.CardViewHolder) viewHolder;
 
         // set the title and the snippet
-        holder.textName.setText(warehousedestination.getDestinationName());
-        holder.textAmount.setText(warehousedestination.getDestinationAmount());
+        holder.textName.setText("Tujuan : " + warehousedestination.getDestinationName());
+        holder.textAmount.setText("Jumlah Truk : " + warehousedestination.getDestinationAmount());
 
         //remove single match from realm
         holder.card.setOnLongClickListener(new View.OnLongClickListener() {

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/bg3"
+    android:id="@+id/relatively"
     android:layout_height="match_parent"
     tools:context=".CostActivity">
     <android.support.v7.widget.Toolbar
@@ -17,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bayar"
+            android:text="Biaya"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
@@ -28,6 +29,7 @@
     <RelativeLayout
         android:layout_below="@+id/toolbar_top"
         android:id="@+id/relative"
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -36,10 +38,12 @@
             android:src="@drawable/bayar"
             android:layout_height="130dp" />
         <TextView
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
             android:layout_below="@+id/imgbayar"
             android:layout_width="wrap_content"
-            android:text="Biaya Trafic :"
+            android:text="Biaya Traffic :"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:layout_height="wrap_content" />
     </RelativeLayout>
