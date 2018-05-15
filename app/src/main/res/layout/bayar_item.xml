@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Linearbayar"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
     android:layout_marginTop="15dp"
@@ -9,6 +10,7 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:id="@+id/tvware"
         android:layout_weight="3"
         android:layout_width="wrap_content"
         android:text="A ke 1"
@@ -16,6 +18,7 @@
         android:textStyle="bold"
         android:layout_height="wrap_content" />
     <TextView
+        android:id="@+id/tvValue"
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:text="0"
@@ -23,6 +26,7 @@
         android:textColor="@color/colorPrimary"
         android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/btnedit"
         android:layout_width="wrap_content"
         android:text="Edit"
         android:textAllCaps="false"

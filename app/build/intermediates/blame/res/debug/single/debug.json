@@ -144,6 +144,10 @@
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_bayar.xml.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\layout\\content_bayar.xml"
+    },
+    {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_bayar.png.flat",
         "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-mdpi\\bayar.png"
     },
@@ -388,8 +392,16 @@
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\layout_bayar_item.xml.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\layout\\bayar_item.xml"
+    },
+    {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_bg3.png.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-mdpi\\bg3.png"
     },
     {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -1104,6 +1116,10 @@
         "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_bg3.png.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-xhdpi\\bg3.png"
+    },
+    {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -1276,6 +1292,10 @@
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_bg3.png.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-xxxhdpi\\bg3.png"
+    },
+    {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\layout\\abc_expanded_menu_layout.xml"
     },
@@ -1430,6 +1450,10 @@
     {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_bg3.png.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-xxhdpi\\bg3.png"
     },
     {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1666,6 +1690,10 @@
     {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\764ca96f3483bd2ce19e8cca17b5f248\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_bg3.png.flat",
+        "source": "D:\\Android\\Kuliah\\SPK\\app\\src\\main\\res\\drawable-hdpi\\bg3.png"
     },
     {
         "merged": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",

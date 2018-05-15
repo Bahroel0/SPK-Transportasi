@@ -32,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         cvSource = (CardView) findViewById(R.id.clickSource);
         cvDestination = (CardView) findViewById(R.id.clickDestination);
         btnClearData = (Button) findViewById(R.id.clearData);
+        cvCost = (CardView)findViewById(R.id.clickCost);
+
+        cvCost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cvsrc = new Intent(getApplicationContext(), CostActivity.class);
+                cvsrc.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(cvsrc);
+            }
+        });
 
 
         cvSource.setOnClickListener(new View.OnClickListener() {

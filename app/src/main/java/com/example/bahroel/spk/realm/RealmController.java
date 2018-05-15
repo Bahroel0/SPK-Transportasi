@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.support.v4.app.Fragment;
 
+import com.example.bahroel.spk.model.Cost;
 import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 
@@ -74,10 +75,22 @@ public class RealmController {
         return realm.where(WarehouseSource.class).findAll();
     }
 
+//    //find ssource from name
+//    public RealmResults<WarehouseSource> getwhsourcesNAme() {
+//
+//        return realm.where(WarehouseSource.class).findAll();
+//    }
+
     //find all objects in the WarehouseDestination.class
     public RealmResults<WarehouseDestination> getwhdestinations() {
 
         return realm.where(WarehouseDestination.class).findAll();
+    }
+
+    //find all objects in the WarehouseDestination.class
+    public RealmResults<Cost> getCostObject() {
+
+        return realm.where(Cost.class).findAll();
     }
 
     //query a single item with the given id

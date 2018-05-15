@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Set;
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.example.bahroel.spk.model.Cost;
 import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 
@@ -26,6 +27,7 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     static {
         Set<Class<? extends RealmObject>> modelClasses = new HashSet<Class<? extends RealmObject>>();
         modelClasses.add(WarehouseSource.class);
+        modelClasses.add(Cost.class);
         modelClasses.add(WarehouseDestination.class);
         MODEL_CLASSES = Collections.unmodifiableSet(modelClasses);
     }
@@ -36,6 +38,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return WarehouseSourceRealmProxy.initTable(transaction);
+        } else if (clazz.equals(Cost.class)) {
+            return CostRealmProxy.initTable(transaction);
         } else if (clazz.equals(WarehouseDestination.class)) {
             return WarehouseDestinationRealmProxy.initTable(transaction);
         } else {
@@ -49,6 +53,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return WarehouseSourceRealmProxy.validateTable(transaction);
+        } else if (clazz.equals(Cost.class)) {
+            return CostRealmProxy.validateTable(transaction);
         } else if (clazz.equals(WarehouseDestination.class)) {
             return WarehouseDestinationRealmProxy.validateTable(transaction);
         } else {
@@ -62,6 +68,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return WarehouseSourceRealmProxy.getFieldNames();
+        } else if (clazz.equals(Cost.class)) {
+            return CostRealmProxy.getFieldNames();
         } else if (clazz.equals(WarehouseDestination.class)) {
             return WarehouseDestinationRealmProxy.getFieldNames();
         } else {
@@ -75,6 +83,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return WarehouseSourceRealmProxy.getTableName();
+        } else if (clazz.equals(Cost.class)) {
+            return CostRealmProxy.getTableName();
         } else if (clazz.equals(WarehouseDestination.class)) {
             return WarehouseDestinationRealmProxy.getTableName();
         } else {
@@ -88,6 +98,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return clazz.cast(new WarehouseSourceRealmProxy(columnInfo));
+        } else if (clazz.equals(Cost.class)) {
+            return clazz.cast(new CostRealmProxy(columnInfo));
         } else if (clazz.equals(WarehouseDestination.class)) {
             return clazz.cast(new WarehouseDestinationRealmProxy(columnInfo));
         } else {
@@ -108,6 +120,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return clazz.cast(WarehouseSourceRealmProxy.copyOrUpdate(realm, (WarehouseSource) obj, update, cache));
+        } else if (clazz.equals(Cost.class)) {
+            return clazz.cast(CostRealmProxy.copyOrUpdate(realm, (Cost) obj, update, cache));
         } else if (clazz.equals(WarehouseDestination.class)) {
             return clazz.cast(WarehouseDestinationRealmProxy.copyOrUpdate(realm, (WarehouseDestination) obj, update, cache));
         } else {
@@ -122,6 +136,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return clazz.cast(WarehouseSourceRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        } else if (clazz.equals(Cost.class)) {
+            return clazz.cast(CostRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(WarehouseDestination.class)) {
             return clazz.cast(WarehouseDestinationRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else {
@@ -136,6 +152,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return clazz.cast(WarehouseSourceRealmProxy.createUsingJsonStream(realm, reader));
+        } else if (clazz.equals(Cost.class)) {
+            return clazz.cast(CostRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(WarehouseDestination.class)) {
             return clazz.cast(WarehouseDestinationRealmProxy.createUsingJsonStream(realm, reader));
         } else {
@@ -151,6 +169,8 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
 
         if (clazz.equals(WarehouseSource.class)) {
             return clazz.cast(WarehouseSourceRealmProxy.createDetachedCopy((WarehouseSource) realmObject, 0, maxDepth, cache));
+        } else if (clazz.equals(Cost.class)) {
+            return clazz.cast(CostRealmProxy.createDetachedCopy((Cost) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(WarehouseDestination.class)) {
             return clazz.cast(WarehouseDestinationRealmProxy.createDetachedCopy((WarehouseDestination) realmObject, 0, maxDepth, cache));
         } else {
