@@ -52,7 +52,7 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
 
         // set the title and the snippet
         holder.textName.setText(warehousesource.getSourceName());
-        holder.textAmount.setText(warehousesource.getSourceAmount());
+        holder.textAmount.setText("Jumlah Truk : "+warehousesource.getSourceAmount());
 
         //remove single match from realm
         holder.card.setOnLongClickListener(new View.OnLongClickListener() {
@@ -82,6 +82,8 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
                 return false;
             }
         });
+
+
 
         //update single match from realm
         holder.card.setOnClickListener(new View.OnClickListener() {
@@ -152,4 +154,16 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
             textAmount = (TextView) itemView.findViewById(R.id.TextViewJumlahSrc);
         }
     }
+
+    public void removeItem(int position) {
+        Toast.makeText(context, "data dihapus", Toast.LENGTH_SHORT).show();
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(WarehouseSource deletedItem, int position) {
+
+        Toast.makeText(context, "data dikembalikan", Toast.LENGTH_SHORT).show();
+        notifyItemMoved(4,position);
+    }
+
 }

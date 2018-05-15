@@ -14,7 +14,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.example.bahroel.spk.adapters.RealmWarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.RealmWarehouseSourceAdapter;
@@ -38,22 +42,32 @@ import io.realm.RealmResults;
 public class HomeActivity extends AppCompatActivity {
     private WarehouseSourceAdapter adapter;
     private Realm realm;
+    ViewFlipper viewFlipper;
     private FloatingActionButton fabmain;
     private LayoutInflater inflater;
     private RecyclerView recycler;
+    private LinearLayout linearLayout;
 
     ViewPager viewPager;
-    int images[] = {R.drawable.imgasal, R.drawable.imgtujuan};
+    int images[] = {R.drawable.asal1, R.drawable.asal2,R.drawable.asal3};
     ViewPagerSourceAdapter viewpagersourceadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+//        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
+        for(int image:images){
+            flipperImage(image);
+        }
 
-        viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
-        viewPager.setAdapter(viewpagersourceadapter);
+
+
+        linearLayout = (LinearLayout)findViewById(R.id.linearLayoutbahroel);
+
+//        viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
+//        viewPager.setAdapter(viewpagersourceadapter);
 
         fabmain = (FloatingActionButton) findViewById(R.id.fabmain);
         recycler = (RecyclerView) findViewById(R.id.recyclerSrc);
@@ -123,6 +137,20 @@ public class HomeActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+    }
+
+    public void flipperImage(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        viewFlipper.addView(imageView);
+        viewFlipper.setFlipInterval(5000);
+        viewFlipper.setAutoStart(true);
+
+        viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
+        viewFlipper.setOutAnimation(this, android.R.anim.slide_out_right);
+
+
     }
 
     public void setRealmAdapter(RealmResults<WarehouseSource> warehousesources) {
@@ -198,4 +226,34 @@ public class HomeActivity extends AppCompatActivity {
         Prefs.with(this).setPreLoad(true);
 
     }
+
+//    @Override
+//    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
+//        if (viewHolder instanceof WarehouseSourceAdapter.CardViewHolder) {
+//
+//            RealmResults<WarehouseSource> results = realm.where(WarehouseSource.class).findAll();
+//            final WarehouseSource whsrc = results.get(position);
+//            String name = whsrc.getSourceName();
+//            realm.beginTransaction();
+//            results.remove(position);
+//            realm.commitTransaction();
+//
+//            final int deletedIndex = viewHolder.getAdapterPosition();
+//            adapter.removeItem(viewHolder.getAdapterPosition());
+//
+//            // showing snack bar with Undo option
+//            Snackbar snackbar = Snackbar.make(linearLayout, name + " removed from cart!", Snackbar.LENGTH_LONG);
+//            snackbar.setAction("UNDO", new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//
+//                    // undo is selected, restore the deleted item
+//                    adapter.restoreItem(whsrc, deletedIndex);
+//                }
+//            });
+//            snackbar.setActionTextColor(Color.YELLOW);
+//            snackbar.show();
+//
+//        }
+//    }
 }

@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\File\\SM 4\\Sistem Pendukung Keputusan\\SPK-Transportasi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
+            "outputFile": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ed0a4c34d27362208915901d6a135553\\res\\values-kk\\values-kk.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,217,320,430,515,621,740,821,901,982,1085,1190,1288,1395,1504,1604,1770,1869",
-                        "endColumns": "111,102,109,84,105,118,80,79,80,102,104,97,106,108,99,165,98,80",
-                        "endOffsets": "212,315,425,510,616,735,816,896,977,1080,1185,1283,1390,1499,1599,1765,1864,1945"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5ae36f681e536a3b4bd9cf4beae05535\\res\\values-kk\\values-kk.xml",
+                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d71aa8cb562821a1f14776334ff32a4a\\res\\values-kk\\values-kk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "1950",
                         "endColumns": "100",
                         "endOffsets": "2046"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\values-kk\\values-kk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,217,320,430,515,621,740,821,901,982,1085,1190,1288,1395,1504,1604,1770,1869",
+                        "endColumns": "111,102,109,84,105,118,80,79,80,102,104,97,106,108,99,165,98,80",
+                        "endOffsets": "212,315,425,510,616,735,816,896,977,1080,1185,1283,1390,1499,1599,1765,1864,1945"
                     }
                 }
             ]
