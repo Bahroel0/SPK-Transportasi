@@ -1,5 +1,7 @@
 package com.example.bahroel.spk.model;
 
+import java.util.UUID;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 

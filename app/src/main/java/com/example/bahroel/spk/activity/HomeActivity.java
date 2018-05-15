@@ -47,8 +47,8 @@ public class HomeActivity extends AppCompatActivity {
     private LayoutInflater inflater;
     private RecyclerView recycler;
     private LinearLayout linearLayout;
-
     ViewPager viewPager;
+
     int images[] = {R.drawable.asal1, R.drawable.asal2,R.drawable.asal3};
     ViewPagerSourceAdapter viewpagersourceadapter;
     @Override
@@ -76,9 +76,9 @@ public class HomeActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(this).getPreLoad()) {
-            setRealmData();
-        }
+//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
+//            setRealmData();
+//        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -179,6 +179,7 @@ public class HomeActivity extends AppCompatActivity {
     private void setRealmData() {
 
         ArrayList<WarehouseSource> whsources = new ArrayList<>();
+//        whsources.clear();
 
         WarehouseSource whsrc = new WarehouseSource();
         whsrc.setId(1 + System.currentTimeMillis());
@@ -223,7 +224,7 @@ public class HomeActivity extends AppCompatActivity {
             realm.commitTransaction();
         }
 
-        Prefs.with(this).setPreLoad(true);
+        Prefs.with(this).setPreLoad(false);
 
     }
 

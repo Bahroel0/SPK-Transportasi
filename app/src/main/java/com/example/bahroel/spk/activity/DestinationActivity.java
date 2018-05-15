@@ -59,9 +59,9 @@ public class DestinationActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(this).getPreLoad()) {
-            setRealmData();
-        }
+//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
+//            setRealmData();
+//        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -149,6 +149,7 @@ public class DestinationActivity extends AppCompatActivity {
 
         ArrayList<WarehouseDestination> whdestination = new ArrayList<>();
 
+//        whdestination.clear();
         WarehouseDestination whdst = new WarehouseDestination();
         whdst.setId(1 + System.currentTimeMillis());
         whdst.setDestinationName("PT SAWIT");

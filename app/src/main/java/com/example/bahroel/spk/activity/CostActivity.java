@@ -1,5 +1,6 @@
 package com.example.bahroel.spk.activity;
 
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,16 +12,20 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import com.example.bahroel.spk.Constant;
 import com.example.bahroel.spk.adapters.CostAdapter;
 import com.example.bahroel.spk.adapters.RealmCostAdapter;
 import com.example.bahroel.spk.adapters.RealmWarehouseSourceAdapter;
 import com.example.bahroel.spk.adapters.WarehouseSourceAdapter;
 import com.example.bahroel.spk.app.Prefs;
 import com.example.bahroel.spk.model.Cost;
+import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 import com.example.bahroel.spk.realm.RealmController;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.UUID;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -45,7 +50,7 @@ public class CostActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(this).getPreLoad()) {
+        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
             setRealmData();
         }
 
@@ -84,21 +89,64 @@ public class CostActivity extends AppCompatActivity {
 
     private void setRealmData() {
 
+        int id = RealmController.getInstance().getCostObject().size();
+//        ArrayList<Cost> whsources = new ArrayList<>();
+
+
+//        whsources.clear();
+//        Random rand = new Random();
+//
+//        long  n = rand.nextLong() + 1;
+//        Cost whsrc = new Cost();
+//        whsrc.setId(id+1 + System.currentTimeMillis());
+//        whsrc.setSourceName("PT SAWIT");
+//        whsrc.setDestinationName("Pabrik A");
+//        whsrc.setCost(5);
+//        whsources.add(whsrc);
+//
+//        whsrc = new Cost();
+//        whsrc.setId(id+2 + System.currentTimeMillis());
+//        whsrc.setSourceName("PT SAWITasdasd");
+//        whsrc.setDestinationName("Pabrik b");
+//        whsrc.setCost(5);
+//        whsources.add(whsrc);
+
+
+//
+//        for (Cost whs : whsources) {
+//            // Persist your data easily
+//            realm.beginTransaction();
+//            realm.copyToRealm(whs);
+//            realm.commitTransaction();
+//        }
+//
+//        Prefs.with(this).setPreLoad(true);
+
 
         String[] source = new String[RealmController.getInstance().getwhsources().size()];
         String[] destination = new String[RealmController.getInstance().getwhdestinations().size()];
+
+        Log.d(TAG, "nilai string source : " + String.valueOf(source.length));
+
+
+
 
 
         ArrayList<Cost> costs = new ArrayList<>();
 
         for(int i=0; i<source.length; i++){
+            WarehouseSource warehouseSource = RealmController.getInstance().getwhsources().get(i);
+            source[i] = warehouseSource.getSourceName();
             for(int j=0; j<destination.length;j++){
+                WarehouseDestination warehouseDestination = RealmController.getInstance().getwhdestinations().get(j);
+                destination[j] = warehouseDestination.getDestinationName();
                 Cost cost = new Cost();
-                cost.setId(1 + System.currentTimeMillis());
+                cost.setId( id + j + 1+ System.currentTimeMillis());
                 cost.setCost(0);
                 cost.setSourceName(source[i]);
                 cost.setDestinationName(destination[j]);
                 costs.add(cost);
+
             }
         }
 

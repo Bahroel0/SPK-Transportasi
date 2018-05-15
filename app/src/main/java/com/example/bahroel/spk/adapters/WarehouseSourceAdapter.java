@@ -155,15 +155,5 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
         }
     }
 
-    public void removeItem(int position) {
-        Toast.makeText(context, "data dihapus", Toast.LENGTH_SHORT).show();
-        notifyItemRemoved(position);
-    }
-
-    public void restoreItem(WarehouseSource deletedItem, int position) {
-
-        Toast.makeText(context, "data dikembalikan", Toast.LENGTH_SHORT).show();
-        notifyItemMoved(4,position);
-    }
 
 }

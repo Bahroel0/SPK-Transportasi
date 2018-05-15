@@ -66,6 +66,7 @@ public class RealmController {
         realm.beginTransaction();
         realm.clear(WarehouseSource.class);
         realm.clear(WarehouseDestination.class);
+        realm.clear(Cost.class);
         realm.commitTransaction();
     }
 
