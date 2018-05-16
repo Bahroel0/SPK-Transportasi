@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import com.example.bahroel.spk.Constant;
 import com.example.bahroel.spk.adapters.CostAdapter;
 import com.example.bahroel.spk.adapters.RealmCostAdapter;
 import com.example.bahroel.spk.adapters.RealmWarehouseSourceAdapter;

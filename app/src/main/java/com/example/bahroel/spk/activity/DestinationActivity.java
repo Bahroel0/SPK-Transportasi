@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -82,7 +83,7 @@ public class DestinationActivity extends AppCompatActivity {
                 View content = inflater.inflate(R.layout.edit_item_destination, null);
                 final EditText editName = (EditText) content.findViewById(R.id.etNamaDst);
                 final EditText editAmount = (EditText) content.findViewById(R.id.etJumlahDst);
-
+                editAmount.setInputType(InputType.TYPE_CLASS_NUMBER);
                 AlertDialog.Builder builder = new AlertDialog.Builder(DestinationActivity.this);
                 builder.setView(content)
                         .setTitle("Tambahkan Data Tujuan")

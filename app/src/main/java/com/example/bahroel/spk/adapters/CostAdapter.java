@@ -63,7 +63,37 @@ public class CostAdapter extends RealmRecyclerViewAdapter<Cost> {
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View content = inflater.inflate(R.layout.edit_cost, null);
+                final EditText editName = (EditText) content.findViewById(R.id.etCostValue);
+
+                editName.setText(String.valueOf(cost.getCost()));
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setView(content)
+                        .setTitle("Edit Biaya")
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                RealmResults<Cost> results = realm.where(Cost.class).findAll();
+
+                                realm.beginTransaction();
+                                results.get(position).setCost(Integer.valueOf(editName.getText().toString()));
+                                realm.commitTransaction();
+
+                                notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 
