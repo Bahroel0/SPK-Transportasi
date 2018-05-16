@@ -44,10 +44,6 @@ public class GenerateActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-            setRealmData();
-        }
-
         // refresh the realm instance
         RealmController.with(this).refresh();
         // get all persisted objects
@@ -79,74 +75,4 @@ public class GenerateActivity extends AppCompatActivity {
         recycler.setAdapter(adapter);
     }
 
-    private void setRealmData() {
-        ArrayList<Generate> whsources = new ArrayList<>();
-//        whsources.clear();
-
-        Generate whsrc = new Generate();
-        whsrc.setId(1 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang A");
-        whsrc.setDstName("Pabrik A");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("3");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(2 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(3 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(4 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(5 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(6 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        whsrc = new Generate();
-        whsrc.setId(7 + System.currentTimeMillis());
-        whsrc.setSrcName("Gudang B");
-        whsrc.setDstName("Pabrik B");
-        whsrc.setCostValue(4);
-        whsrc.setAmount("6");
-        whsources.add(whsrc);
-
-        for (Generate whs : whsources) {
-            // Persist your data easily
-            realm.beginTransaction();
-            realm.copyToRealm(whs);
-            realm.copyToRealmOrUpdate(whs);
-            realm.commitTransaction();
-        }
-
-        Prefs.with(this).setPreLoad(true);
-    }
 }

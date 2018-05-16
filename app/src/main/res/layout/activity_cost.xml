@@ -29,14 +29,14 @@
     <RelativeLayout
         android:layout_below="@+id/toolbar_top"
         android:id="@+id/relative"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/imgbayar"
             android:layout_width="match_parent"
             android:src="@drawable/bayar"
-            android:layout_height="130dp" />
+            android:layout_height="110dp" />
         <TextView
             android:layout_marginTop="40dp"
             android:layout_marginLeft="10dp"

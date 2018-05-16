@@ -1,18 +1,19 @@
 package com.example.bahroel.spk;
 
+import com.example.bahroel.spk.activity.MainActivity;
+import com.example.bahroel.spk.app.Prefs;
+import com.example.bahroel.spk.model.Generate;
+
+import java.util.ArrayList;
+
 public class Constant {
 
-    private static Constant mInstance= null;
+    public ArrayList<Generate> generateArrayList = new ArrayList<>();
 
-    public int id;
-
-    protected Constant(){}
-
-    public static synchronized Constant getInstance() {
-        if(null == mInstance){
-            mInstance = new Constant();
-        }
-        return mInstance;
+    public void setGenerateArrayList(){
+//        if (!Prefs.with(MainActivity.class).getPreLoad()) {
+//            setRealmData();
+//        }
     }
 
 }

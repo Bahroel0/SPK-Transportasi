@@ -50,9 +50,9 @@ public class CostActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-            setRealmData();
-        }
+//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
+//            setRealmData();
+//        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -87,81 +87,4 @@ public class CostActivity extends AppCompatActivity {
         recycler.setAdapter(adapter);
     }
 
-    private void setRealmData() {
-
-        int id = RealmController.getInstance().getCostObject().size();
-//        ArrayList<Cost> whsources = new ArrayList<>();
-//
-//
-//        whsources.clear();
-////        realm.clear(Cost.class);
-//        Random rand = new Random();
-//
-//        long  n = rand.nextLong() * 10;
-//        Cost whsrc = new Cost();
-//        whsrc.setId(n + System.currentTimeMillis());
-//        whsrc.setSourceName("PT SAWIT");
-//        whsrc.setDestinationName("Pabrik A");
-//        whsrc.setCost(5);
-//        whsources.add(whsrc);
-//
-//        whsrc = new Cost();
-//        whsrc.setId(n + System.currentTimeMillis());
-//        whsrc.setSourceName("PT SAWITasdasd");
-//        whsrc.setDestinationName("Pabrik b");
-//        whsrc.setCost(5);
-//        whsources.add(whsrc);
-//
-//
-//
-//        for (Cost whs : whsources) {
-//            // Persist your data easily
-//            realm.beginTransaction();
-////            realm.copyToRealm(whs);
-//            realm.copyToRealmOrUpdate(whs);
-//            realm.commitTransaction();
-//        }
-//
-//        Prefs.with(this).setPreLoad(true);
-
-
-
-        String[] source = new String[RealmController.getInstance().getwhsources().size()];
-        String[] destination = new String[RealmController.getInstance().getwhdestinations().size()];
-
-        Log.d(TAG, "nilai string source : " + String.valueOf(source.length));
-
-
-        ArrayList<Cost> costs = new ArrayList<>();
-//        int k = 0;
-        for(int i=0; i<source.length; i++){
-            WarehouseSource warehouseSource = RealmController.getInstance().getwhsources().get(i);
-            source[i] = warehouseSource.getSourceName();
-            for(int j=0; j<destination.length;j++){
-                WarehouseDestination warehouseDestination = RealmController.getInstance().getwhdestinations().get(j);
-                destination[j] = warehouseDestination.getDestinationName();
-                Cost cost = new Cost();
-                cost.setId(id + j + 1 + System.currentTimeMillis());
-                cost.setCost(0);
-                cost.setSourceName(source[i]);
-                cost.setDestinationName(destination[j]);
-                costs.add(cost);
-
-            }
-//            k++;
-        }
-
-        Log.d(TAG,"nilai costs : " + costs.toString());
-
-
-        for (Cost whs : costs) {
-            // Persist your data easily
-            realm.beginTransaction();
-//            realm.copyToRealm(whs);
-            realm.copyToRealmOrUpdate(whs);
-            realm.commitTransaction();
-        }
-
-        Prefs.with(this).setPreLoad(true);
-    }
 }

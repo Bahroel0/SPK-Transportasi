@@ -74,9 +74,9 @@ public class HomeActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-            setRealmData();
-        }
+//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
+//            setRealmData();
+//        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();

@@ -50,14 +50,12 @@ public class DestinationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_destination);
 
-//        viewPager = (ViewPager)findViewById(R.id.viewPager);
         viewFlipper = (ViewFlipper)findViewById(R.id.viewflipperDesti);
         for(int image:images){
             flipperImage(image);
         }
 
         viewpagerdestinationadapter = new ViewPagerDestinationAdapter(DestinationActivity.this, images);
-//        viewPager.setAdapter(viewpagerdestinationadapter);
 
         fabmain = (FloatingActionButton) findViewById(R.id.fabDst);
         recycler = (RecyclerView) findViewById(R.id.recyclerDst);
@@ -65,10 +63,6 @@ public class DestinationActivity extends AppCompatActivity {
         //get realm instance
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
-
-//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-//            setRealmData();
-//        }
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -150,53 +144,6 @@ public class DestinationActivity extends AppCompatActivity {
         // create an empty adapter and add it to the recycler view
         adapter = new WarehouseDestinationAdapter(this);
         recycler.setAdapter(adapter);
-    }
-
-    private void setRealmData() {
-
-        ArrayList<WarehouseDestination> whdestination = new ArrayList<>();
-
-//        whdestination.clear();
-        WarehouseDestination whdst = new WarehouseDestination();
-        whdst.setId(1 + System.currentTimeMillis());
-        whdst.setDestinationName("PT SAWIT");
-        whdst.setDestinationAmount("4");
-        whdestination.add(whdst);
-
-        whdst = new WarehouseDestination();
-        whdst.setId(2 + System.currentTimeMillis());
-        whdst.setDestinationName("PT KELAPA MUDA");
-        whdst.setDestinationAmount("5");
-        whdestination.add(whdst);
-
-        whdst = new WarehouseDestination();
-        whdst.setId(3 + System.currentTimeMillis());
-        whdst.setDestinationName("PT PLN");
-        whdst.setDestinationAmount("6");
-        whdestination.add(whdst);
-
-        whdst = new WarehouseDestination();
-        whdst.setId(4 + System.currentTimeMillis());
-        whdst.setDestinationName("PT KELOPO");
-        whdst.setDestinationAmount("7");
-        whdestination.add(whdst);
-
-        whdst = new WarehouseDestination();
-        whdst.setId(5 + System.currentTimeMillis());
-        whdst.setDestinationName("PT SEJAHTERA");
-        whdst.setDestinationAmount("8");
-        whdestination.add(whdst);
-
-
-        for (WarehouseDestination whd : whdestination) {
-            // Persist your data easily
-            realm.beginTransaction();
-            realm.copyToRealm(whd);
-            realm.commitTransaction();
-        }
-
-        Prefs.with(this).setPreLoad(true);
-
     }
 
     public void flipperImage(int image){
