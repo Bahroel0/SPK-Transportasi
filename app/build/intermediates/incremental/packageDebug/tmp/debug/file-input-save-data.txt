@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 17 06:05:05 ICT 2018
+#Thu May 17 06:49:50 ICT 2018
 7.path=lib/mips/librealm-jni.so
 2.base=D\:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 5.set=NATIVE_RESOURCE

@@ -57,9 +57,7 @@ public class CostActivity extends AppCompatActivity {
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
 
-//        if (!Prefs.with(getApplicationContext()).getPreLoad()) {
-//            setRealmData();
-//        }
+
 
         // refresh the realm instance
         RealmController.with(this).refresh();
@@ -70,6 +68,9 @@ public class CostActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
     public void setRealmAdapter(RealmResults<Cost> cost) {
 

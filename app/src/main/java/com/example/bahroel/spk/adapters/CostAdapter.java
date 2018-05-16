@@ -59,6 +59,12 @@ public class CostAdapter extends RealmRecyclerViewAdapter<Cost> {
         // set the title and the snippet
         holder.tvWare.setText(cost.getSourceName() + " ke " + cost.getDestinationName());
         holder.tvValue.setText(String.valueOf(cost.getCost()));
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
     }
 

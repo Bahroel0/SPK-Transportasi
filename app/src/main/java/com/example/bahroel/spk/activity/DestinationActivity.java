@@ -24,6 +24,7 @@ import com.example.bahroel.spk.adapters.ViewPagerSourceAdapter;
 import com.example.bahroel.spk.adapters.WarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.WarehouseSourceAdapter;
 import com.example.bahroel.spk.app.Prefs;
+import com.example.bahroel.spk.model.Cost;
 import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 import com.example.bahroel.spk.realm.RealmController;
@@ -98,10 +99,33 @@ public class DestinationActivity extends AppCompatActivity {
                                 if (editName.getText() == null || editName.getText().toString().equals("") || editName.getText().toString().equals(" ")) {
                                     Toast.makeText(DestinationActivity.this, "Entry not saved, missing name", Toast.LENGTH_SHORT).show();
                                 } else {
+
+                                    ArrayList<Cost> costArrayList = new ArrayList<>();
+                                    RealmResults<WarehouseSource> warehouseSources = RealmController.with(DestinationActivity.this).getwhsources();
+
+                                    for(int i=0; i<warehouseSources.size(); i++){
+                                        Cost cost = new Cost();
+                                        cost.setId(RealmController.getInstance().getCostObject().size()+1+ System.currentTimeMillis());
+                                        cost.setSourceName(warehouseSources.get(i).getSourceName());
+                                        cost.setDestinationName(editName.getText().toString());
+                                        cost.setCost(0);
+                                        costArrayList.add(cost);
+                                    }
+
+                                    for (Cost cost1 : costArrayList) {
+                                        // Persist your data easily
+                                        realm.beginTransaction();
+                                        realm.copyToRealm(cost1);
+                                        realm.copyToRealmOrUpdate(cost1);
+                                        realm.commitTransaction();
+                                    }
+
                                     // Persist your data easily
                                     realm.beginTransaction();
                                     realm.copyToRealm(warehouseDestination);
                                     realm.commitTransaction();
+
+
 
                                     adapter.notifyDataSetChanged();
 
