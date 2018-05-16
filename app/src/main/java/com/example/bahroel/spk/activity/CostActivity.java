@@ -1,6 +1,7 @@
 package com.example.bahroel.spk.activity;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class CostActivity extends AppCompatActivity {
     private LayoutInflater inflater;
     private RecyclerView recycler;
     private final String TAG = CostActivity.class.getSimpleName();
+    TextView tvbiayatrafic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,11 @@ public class CostActivity extends AppCompatActivity {
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
         recycler = (RecyclerView)findViewById(R.id.recyclerbayar);
+        tvbiayatrafic = (TextView)findViewById(R.id.tvbiayatrafic);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/berlinsans.ttf");
+        tvbiayatrafic.setTypeface(custom_font);
+
+
         //get realm instance
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();

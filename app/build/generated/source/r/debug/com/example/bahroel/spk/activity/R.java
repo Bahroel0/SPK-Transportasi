@@ -3979,20 +3979,21 @@ public final class R {
     public static final int tvTujuanValue=0x7f0800e2;
     public static final int tvValue=0x7f0800e3;
     public static final int tvbiayaaaaaa=0x7f0800e4;
-    public static final int tvgeneratedata=0x7f0800e5;
-    public static final int tvinputdataasal=0x7f0800e6;
-    public static final int tvinputdatatujuan=0x7f0800e7;
-    public static final int tvware=0x7f0800e8;
-    public static final int uniform=0x7f0800e9;
-    public static final int up=0x7f0800ea;
-    public static final int useLogo=0x7f0800eb;
-    public static final int viewFlipperSource=0x7f0800ec;
-    public static final int view_offset_helper=0x7f0800ed;
-    public static final int viewflipperDesti=0x7f0800ee;
-    public static final int visible=0x7f0800ef;
-    public static final int withText=0x7f0800f0;
-    public static final int wrap=0x7f0800f1;
-    public static final int wrap_content=0x7f0800f2;
+    public static final int tvbiayatrafic=0x7f0800e5;
+    public static final int tvgeneratedata=0x7f0800e6;
+    public static final int tvinputdataasal=0x7f0800e7;
+    public static final int tvinputdatatujuan=0x7f0800e8;
+    public static final int tvware=0x7f0800e9;
+    public static final int uniform=0x7f0800ea;
+    public static final int up=0x7f0800eb;
+    public static final int useLogo=0x7f0800ec;
+    public static final int viewFlipperSource=0x7f0800ed;
+    public static final int view_offset_helper=0x7f0800ee;
+    public static final int viewflipperDesti=0x7f0800ef;
+    public static final int visible=0x7f0800f0;
+    public static final int withText=0x7f0800f1;
+    public static final int wrap=0x7f0800f2;
+    public static final int wrap_content=0x7f0800f3;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;

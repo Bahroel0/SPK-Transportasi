@@ -38,6 +38,7 @@
             android:src="@drawable/bayar"
             android:layout_height="110dp" />
         <TextView
+            android:id="@+id/tvbiayatrafic"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="10dp"
             android:layout_below="@+id/imgbayar"
