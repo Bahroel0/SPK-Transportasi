@@ -81,8 +81,8 @@ public class DestinationActivity extends AppCompatActivity {
         fabmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
                 inflater = DestinationActivity.this.getLayoutInflater();
                 View content = inflater.inflate(R.layout.edit_item_destination, null);
                 final EditText editName = (EditText) content.findViewById(R.id.etNamaDst);
@@ -90,7 +90,7 @@ public class DestinationActivity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(DestinationActivity.this);
                 builder.setView(content)
-                        .setTitle("Add Warehouse Destination")
+                        .setTitle("Tambahkan Data Tujuan")
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

@@ -89,8 +89,8 @@ public class HomeActivity extends AppCompatActivity {
         fabmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
                 inflater = HomeActivity.this.getLayoutInflater();
                 View content = inflater.inflate(R.layout.edit_item, null);
                 final EditText editName = (EditText) content.findViewById(R.id.etNamaSrc);
@@ -98,7 +98,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
                 builder.setView(content)
-                        .setTitle("Add Warehouse Source")
+                        .setTitle("Tambahkan Data Asal")
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
