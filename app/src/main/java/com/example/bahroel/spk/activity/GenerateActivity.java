@@ -99,6 +99,46 @@ public class GenerateActivity extends AppCompatActivity {
         whsrc.setAmount("6");
         whsources.add(whsrc);
 
+        whsrc = new Generate();
+        whsrc.setId(3 + System.currentTimeMillis());
+        whsrc.setSrcName("Gudang B");
+        whsrc.setDstName("Pabrik B");
+        whsrc.setCostValue(4);
+        whsrc.setAmount("6");
+        whsources.add(whsrc);
+
+        whsrc = new Generate();
+        whsrc.setId(4 + System.currentTimeMillis());
+        whsrc.setSrcName("Gudang B");
+        whsrc.setDstName("Pabrik B");
+        whsrc.setCostValue(4);
+        whsrc.setAmount("6");
+        whsources.add(whsrc);
+
+        whsrc = new Generate();
+        whsrc.setId(5 + System.currentTimeMillis());
+        whsrc.setSrcName("Gudang B");
+        whsrc.setDstName("Pabrik B");
+        whsrc.setCostValue(4);
+        whsrc.setAmount("6");
+        whsources.add(whsrc);
+
+        whsrc = new Generate();
+        whsrc.setId(6 + System.currentTimeMillis());
+        whsrc.setSrcName("Gudang B");
+        whsrc.setDstName("Pabrik B");
+        whsrc.setCostValue(4);
+        whsrc.setAmount("6");
+        whsources.add(whsrc);
+
+        whsrc = new Generate();
+        whsrc.setId(7 + System.currentTimeMillis());
+        whsrc.setSrcName("Gudang B");
+        whsrc.setDstName("Pabrik B");
+        whsrc.setCostValue(4);
+        whsrc.setAmount("6");
+        whsources.add(whsrc);
+
         for (Generate whs : whsources) {
             // Persist your data easily
             realm.beginTransaction();

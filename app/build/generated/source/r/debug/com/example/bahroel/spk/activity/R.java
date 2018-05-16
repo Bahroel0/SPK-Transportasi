@@ -3745,6 +3745,9 @@ public final class R {
     public static final int notify_panel_notification_icon_bg=0x7f07007d;
     public static final int tooltip_frame_dark=0x7f07007e;
     public static final int tooltip_frame_light=0x7f07007f;
+    public static final int tujuan1=0x7f070080;
+    public static final int tujuan2=0x7f070081;
+    public static final int tujuan3=0x7f070082;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -3979,12 +3982,13 @@ public final class R {
     public static final int uniform=0x7f0800e5;
     public static final int up=0x7f0800e6;
     public static final int useLogo=0x7f0800e7;
-    public static final int viewPager=0x7f0800e8;
+    public static final int viewFlipperSource=0x7f0800e8;
     public static final int view_offset_helper=0x7f0800e9;
-    public static final int visible=0x7f0800ea;
-    public static final int withText=0x7f0800eb;
-    public static final int wrap=0x7f0800ec;
-    public static final int wrap_content=0x7f0800ed;
+    public static final int viewflipperDesti=0x7f0800ea;
+    public static final int visible=0x7f0800eb;
+    public static final int withText=0x7f0800ec;
+    public static final int wrap=0x7f0800ed;
+    public static final int wrap_content=0x7f0800ee;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;

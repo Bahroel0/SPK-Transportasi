@@ -49,23 +49,23 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout linearLayout;
 
     ViewPager viewPager;
-    int images[] = {R.drawable.imgasal, R.drawable.imgtujuan};
+    int images[] = {R.drawable.asal1, R.drawable.asal2,R.drawable.asal3};
     ViewPagerSourceAdapter viewpagersourceadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
-//        viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
-//        for(int image:images){
-//            flipperImage(image);
-//        }
+//        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipperSource);
+        for(int image:images){
+            flipperImage(image);
+        }
 
         linearLayout = (LinearLayout)findViewById(R.id.linearLayoutbahroel);
 
         viewpagersourceadapter = new ViewPagerSourceAdapter(HomeActivity.this, images);
-        viewPager.setAdapter(viewpagersourceadapter);
+//        viewPager.setAdapter(viewpagersourceadapter);
 
         fabmain = (FloatingActionButton) findViewById(R.id.fabmain);
         recycler = (RecyclerView) findViewById(R.id.recyclerSrc);

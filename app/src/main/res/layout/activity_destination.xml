@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.ViewPager
+        <ViewFlipper
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/border_bottom"
-            android:id="@+id/viewPager"/>
+            android:id="@+id/viewflipperDesti"/>
 
         <include layout="@layout/content_destination" />
     </LinearLayout>

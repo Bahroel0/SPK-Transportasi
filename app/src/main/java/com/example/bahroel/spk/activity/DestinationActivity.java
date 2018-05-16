@@ -13,7 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.example.bahroel.spk.adapters.RealmWarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.RealmWarehouseSourceAdapter;
@@ -38,19 +40,24 @@ public class DestinationActivity extends AppCompatActivity {
     private FloatingActionButton fabmain;
     private LayoutInflater inflater;
     private RecyclerView recycler;
+    ViewFlipper viewFlipper;
 
     ViewPager viewPager;
-    int images[] = {R.drawable.imgtujuan, R.drawable.imgasal};
+    int images[] = {R.drawable.tujuan1, R.drawable.tujuan2,R.drawable.tujuan3};
     ViewPagerDestinationAdapter viewpagerdestinationadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_destination);
 
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
+//        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewFlipper = (ViewFlipper)findViewById(R.id.viewflipperDesti);
+        for(int image:images){
+            flipperImage(image);
+        }
 
         viewpagerdestinationadapter = new ViewPagerDestinationAdapter(DestinationActivity.this, images);
-        viewPager.setAdapter(viewpagerdestinationadapter);
+//        viewPager.setAdapter(viewpagerdestinationadapter);
 
         fabmain = (FloatingActionButton) findViewById(R.id.fabDst);
         recycler = (RecyclerView) findViewById(R.id.recyclerDst);
@@ -191,5 +198,20 @@ public class DestinationActivity extends AppCompatActivity {
         Prefs.with(this).setPreLoad(true);
 
     }
+
+    public void flipperImage(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        viewFlipper.addView(imageView);
+        viewFlipper.setFlipInterval(5000);
+        viewFlipper.setAutoStart(true);
+
+        viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
+        viewFlipper.setOutAnimation(this, android.R.anim.slide_out_right);
+
+
+    }
+
 
 }
