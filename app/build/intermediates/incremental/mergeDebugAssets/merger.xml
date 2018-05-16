@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\Android\Kuliah\SPK\app\src\main\assets"/><source path="D:\Android\Kuliah\SPK\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Android\Kuliah\SPK\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Android\Kuliah\SPK\app\src\main\assets"><file name="fonts/berlinsans.ttf" path="D:\Android\Kuliah\SPK\app\src\main\assets\fonts\berlinsans.ttf"/></source><source path="D:\Android\Kuliah\SPK\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Android\Kuliah\SPK\app\src\debug\assets"/></dataSet></merger>
