@@ -74,7 +74,7 @@ public class DestinationActivity extends AppCompatActivity {
         // changes will be reflected automatically
         setRealmAdapter(RealmController.with(this).getwhdestinations());
 
-        Toast.makeText(this, "Press card item for edit, long press to remove item", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Press card item for edit, long press to remove item", Toast.LENGTH_SHORT).show();
         fabmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

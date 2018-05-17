@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RealmController.getInstance().clearAll();
-                Toast.makeText(getApplicationContext(), "Success to delete all data ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Success to delete all data ", Toast.LENGTH_SHORT).show();
             }
         });
 

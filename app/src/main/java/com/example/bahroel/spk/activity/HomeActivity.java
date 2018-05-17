@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity {
         // changes will be reflected automatically
         setRealmAdapter(RealmController.with(this).getwhsources());
 
-        Toast.makeText(this, "Press card item for edit, long press to remove item", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Press card item for edit, long press to remove item", Toast.LENGTH_SHORT).show();
         fabmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -234,34 +234,4 @@ public class HomeActivity extends AppCompatActivity {
         Prefs.with(this).setPreLoad(true);
 
     }
-
-//    @Override
-//    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
-//        if (viewHolder instanceof WarehouseSourceAdapter.CardViewHolder) {
-//
-//            RealmResults<WarehouseSource> results = realm.where(WarehouseSource.class).findAll();
-//            final WarehouseSource whsrc = results.get(position);
-//            String name = whsrc.getSourceName();
-//            realm.beginTransaction();
-//            results.remove(position);
-//            realm.commitTransaction();
-//
-//            final int deletedIndex = viewHolder.getAdapterPosition();
-//            adapter.removeItem(viewHolder.getAdapterPosition());
-//
-//            // showing snack bar with Undo option
-//            Snackbar snackbar = Snackbar.make(linearLayout, name + " removed from cart!", Snackbar.LENGTH_LONG);
-//            snackbar.setAction("UNDO", new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//
-//                    // undo is selected, restore the deleted item
-//                    adapter.restoreItem(whsrc, deletedIndex);
-//                }
-//            });
-//            snackbar.setActionTextColor(Color.YELLOW);
-//            snackbar.show();
-//
-//        }
-//    }
 }

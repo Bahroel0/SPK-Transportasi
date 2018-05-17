@@ -49,6 +49,8 @@ public class GenerateActivity extends AppCompatActivity {
         //get realm instance
         this.realm = RealmController.with(this).getRealm();
         setupRecycler();
+        //remove all data in generate
+        RealmController.getInstance().clearGenerate();
 
         // refresh the realm instance
         RealmController.with(this).refresh();

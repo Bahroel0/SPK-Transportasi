@@ -72,6 +72,12 @@ public class RealmController {
         realm.commitTransaction();
     }
 
+    public void clearGenerate() {
+        realm.beginTransaction();
+        realm.clear(Generate.class);
+        realm.commitTransaction();
+    }
+
     //find all objects in the WarehouseSource.class
     public RealmResults<WarehouseSource> getwhsources() {
 
