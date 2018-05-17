@@ -11,6 +11,7 @@ public class Cost extends RealmObject {
     private String SourceName;
     private String DestinationName;
     private int Cost;
+    private boolean isset;
 
     public long getId() {
         return id;
@@ -42,5 +43,13 @@ public class Cost extends RealmObject {
 
     public void setCost(int cost) {
         Cost = cost;
+    }
+
+    public boolean isIsset() {
+        return isset;
+    }
+
+    public void setIsset(boolean isset) {
+        this.isset = isset;
     }
 }

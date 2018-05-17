@@ -135,6 +135,7 @@ public class HomeActivity extends AppCompatActivity {
                                         cost.setSourceName(editName.getText().toString());
                                         cost.setDestinationName(warehouseDestinations.get(i).getDestinationName());
                                         cost.setCost(0);
+                                        cost.setIsset(false);
                                         costArrayList.add(cost);
                                     }
 

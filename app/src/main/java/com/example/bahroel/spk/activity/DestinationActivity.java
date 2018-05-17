@@ -120,6 +120,7 @@ public class DestinationActivity extends AppCompatActivity {
                                         cost.setSourceName(warehouseSources.get(i).getSourceName());
                                         cost.setDestinationName(editName.getText().toString());
                                         cost.setCost(0);
+                                        cost.setIsset(false);
                                         costArrayList.add(cost);
                                     }
 
