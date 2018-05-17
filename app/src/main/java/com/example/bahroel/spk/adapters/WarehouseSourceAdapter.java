@@ -101,7 +101,7 @@ public class WarehouseSourceAdapter extends RealmRecyclerViewAdapter<WarehouseSo
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setView(content)
-                        .setTitle("Edit Warehouse Source")
+                        .setTitle("Edit Data Asal")
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

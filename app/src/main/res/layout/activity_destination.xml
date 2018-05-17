@@ -14,7 +14,7 @@
 
         <ViewFlipper
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:background="@drawable/border_bottom"
             android:id="@+id/viewflipperDesti"/>
 

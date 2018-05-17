@@ -99,7 +99,7 @@ public class WarehouseDestinationAdapter extends RealmRecyclerViewAdapter<Wareho
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setView(content)
-                        .setTitle("Edit Warehouse Destination")
+                        .setTitle("Edit Data Tujuan")
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
