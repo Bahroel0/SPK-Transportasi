@@ -86,7 +86,7 @@ public class GenerateActivity extends AppCompatActivity {
             realm.commitTransaction();
         }
 
-        totalValue.setText(trans.getResultGenerate());
+        totalValue.setText(String.valueOf(trans.getResultGenerate()));
 
 
 

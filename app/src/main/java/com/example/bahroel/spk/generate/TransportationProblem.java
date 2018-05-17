@@ -8,6 +8,7 @@ import com.example.bahroel.spk.realm.RealmController;
 
 import java.util.ArrayList;
 
+import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class TransportationProblem {
@@ -89,9 +90,15 @@ public class TransportationProblem {
             feasible.get(k).setSource(minCost.getSource());
             feasible.get(k).setDesti(minCost.getDesti());
 
+            Realm realm = RealmController.getInstance().getRealm();
+            realm.beginTransaction();
             source.setSourceAmount(String.valueOf(Integer.valueOf(minCost.getSource().getSourceAmount())-min));
             desti.setDestinationAmount(String.valueOf(Integer.valueOf(minCost.getDesti().getDestinationAmount())-min));
+            realm.commitTransaction();
+
+//            notifyDataSetChanged();
             k++;
+
 
             if(Integer.valueOf(source.getSourceAmount()) == 0){
                 for(int p=0; p<warehouseDestinationArrayList.size(); p++){
