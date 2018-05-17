@@ -14,8 +14,11 @@ import com.example.bahroel.spk.adapters.GenerateAdapter;
 import com.example.bahroel.spk.adapters.RealmCostAdapter;
 import com.example.bahroel.spk.adapters.RealmGenerateAdapter;
 import com.example.bahroel.spk.app.Prefs;
+import com.example.bahroel.spk.generate.TransportationProblem;
+import com.example.bahroel.spk.generate.Variable;
 import com.example.bahroel.spk.model.Cost;
 import com.example.bahroel.spk.model.Generate;
+import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 import com.example.bahroel.spk.realm.RealmController;
 
@@ -30,6 +33,8 @@ public class GenerateActivity extends AppCompatActivity {
     private Realm realm;
     private LayoutInflater inflater;
     private RecyclerView recycler;
+    TextView totalValue;
+
     private final String TAG = GenerateActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,7 @@ public class GenerateActivity extends AppCompatActivity {
 
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
+        totalValue = (TextView) findViewById(R.id.tvTotalValue);
 
         recycler = (RecyclerView)findViewById(R.id.recyclerGenerate);
         //get realm instance
@@ -50,6 +56,40 @@ public class GenerateActivity extends AppCompatActivity {
         // create the helper adapter and notify data set changes
         // changes will be reflected automatically
         setRealmAdapter(RealmController.with(this).getGenerates());
+
+        // proses generate
+        RealmResults<WarehouseSource> sources = RealmController.with(GenerateActivity.this).getwhsources();
+        RealmResults<WarehouseDestination> destinations = RealmController.with(GenerateActivity.this).getwhdestinations();
+        RealmResults<Cost> costs = RealmController.with(GenerateActivity.this).getCostObject();
+
+        TransportationProblem trans = new TransportationProblem(sources,destinations,costs);
+
+        ArrayList<Variable> variables = trans.leastCostRule();
+        ArrayList<Generate> generateArrayList = new ArrayList<>();
+
+        for(int j=0; j< variables.size(); j++){
+            Generate generate = new Generate();
+            generate.setId(RealmController.getInstance().getGenerates().size()+1+j + System.currentTimeMillis());
+            generate.setSrcName(variables.get(j).getSource().getSourceName());
+            generate.setDstName(variables.get(j).getDesti().getDestinationName());
+            generate.setCostValue(variables.get(j).getBiaya().getCost());
+            generate.setAmount(String.valueOf(variables.get(j).getJumlah()));
+            generateArrayList.add(generate);
+
+        }
+
+        for (Generate generate1 : generateArrayList) {
+            // Persist your data easily
+            realm.beginTransaction();
+            realm.copyToRealm(generate1);
+            realm.copyToRealmOrUpdate(generate1);
+            realm.commitTransaction();
+        }
+
+        totalValue.setText(trans.getResultGenerate());
+
+
+
     }
 
     public void setRealmAdapter(RealmResults<Generate> generate) {

@@ -105,13 +105,19 @@ public class RealmController {
     //query a single item with the given id
     public WarehouseSource getwhsource(String id) {
 
-        return realm.where(WarehouseSource.class).equalTo("id", id).findFirst();
+        return realm.where(WarehouseSource.class).equalTo("SourceName", id).findFirst();
     }
+
+    public Cost getCostOne(long id){
+        return realm.where(Cost.class).equalTo("id",id).findFirst();
+    }
+
+
 
     //query a single item with the given id
     public WarehouseDestination getwhdestination(String id) {
 
-        return realm.where(WarehouseDestination.class).equalTo("id", id).findFirst();
+        return realm.where(WarehouseDestination.class).equalTo("DestinationName", id).findFirst();
     }
 
     //check if Book.class is empty
