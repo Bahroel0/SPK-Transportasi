@@ -99,13 +99,23 @@ public class DestinationActivity extends AppCompatActivity {
                                 if (editName.getText() == null || editName.getText().toString().equals("") || editName.getText().toString().equals(" ")) {
                                     Toast.makeText(DestinationActivity.this, "Entry not saved, missing name", Toast.LENGTH_SHORT).show();
                                 } else {
+                                    // Persist your data easily
+                                    realm.beginTransaction();
+                                    realm.copyToRealm(warehouseDestination);
+                                    realm.commitTransaction();
+                                    adapter.notifyDataSetChanged();
+
+                                    // scroll the recycler view to bottom
+                                    recycler.scrollToPosition(RealmController.getInstance().getwhdestinations().size() - 1);
+
+                                    RealmController.with(DestinationActivity.this).refresh();
 
                                     ArrayList<Cost> costArrayList = new ArrayList<>();
                                     RealmResults<WarehouseSource> warehouseSources = RealmController.with(DestinationActivity.this).getwhsources();
 
                                     for(int i=0; i<warehouseSources.size(); i++){
                                         Cost cost = new Cost();
-                                        cost.setId(RealmController.getInstance().getCostObject().size()+1+ System.currentTimeMillis());
+                                        cost.setId(RealmController.getInstance().getCostObject().size()+i+1+ System.currentTimeMillis());
                                         cost.setSourceName(warehouseSources.get(i).getSourceName());
                                         cost.setDestinationName(editName.getText().toString());
                                         cost.setCost(0);
@@ -120,17 +130,6 @@ public class DestinationActivity extends AppCompatActivity {
                                         realm.commitTransaction();
                                     }
 
-                                    // Persist your data easily
-                                    realm.beginTransaction();
-                                    realm.copyToRealm(warehouseDestination);
-                                    realm.commitTransaction();
-
-
-
-                                    adapter.notifyDataSetChanged();
-
-                                    // scroll the recycler view to bottom
-                                    recycler.scrollToPosition(RealmController.getInstance().getwhdestinations().size() - 1);
                                 }
                             }
                         })

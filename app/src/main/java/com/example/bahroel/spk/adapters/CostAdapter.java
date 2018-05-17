@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,7 +83,7 @@ public class CostAdapter extends RealmRecyclerViewAdapter<Cost> {
         public LinearLayout linearLayout;
         public TextView tvWare;
         public TextView tvValue;
-        public Button btnEdit;
+        public ImageView btnEdit;
 
         public CostViewHolder(View itemView) {
             // standard view holder pattern with Butterknife view injection
@@ -91,7 +92,7 @@ public class CostAdapter extends RealmRecyclerViewAdapter<Cost> {
             linearLayout = (LinearLayout) itemView.findViewById(R.id.Linearbayar);
             tvWare = (TextView) itemView.findViewById(R.id.tvware);
             tvValue = (TextView) itemView.findViewById(R.id.tvValue);
-            btnEdit = (Button)itemView.findViewById(R.id.btnedit);
+            btnEdit = (ImageView) itemView.findViewById(R.id.btnedit);
         }
     }
 }

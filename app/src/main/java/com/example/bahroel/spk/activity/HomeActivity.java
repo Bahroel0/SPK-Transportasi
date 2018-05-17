@@ -27,6 +27,7 @@ import com.example.bahroel.spk.adapters.ViewPagerSourceAdapter;
 import com.example.bahroel.spk.adapters.WarehouseDestinationAdapter;
 import com.example.bahroel.spk.adapters.WarehouseSourceAdapter;
 import com.example.bahroel.spk.app.Prefs;
+import com.example.bahroel.spk.model.Cost;
 import com.example.bahroel.spk.model.WarehouseDestination;
 import com.example.bahroel.spk.model.WarehouseSource;
 import com.example.bahroel.spk.realm.RealmController;
@@ -121,6 +122,28 @@ public class HomeActivity extends AppCompatActivity {
 
                                     // scroll the recycler view to bottom
                                     recycler.scrollToPosition(RealmController.getInstance().getwhsources().size() - 1);
+
+                                    RealmController.with(HomeActivity.this).refresh();
+
+                                    ArrayList<Cost> costArrayList = new ArrayList<>();
+                                    RealmResults<WarehouseDestination> warehouseDestinations = RealmController.with(HomeActivity.this).getwhdestinations();
+
+                                    for(int i=0; i<warehouseDestinations.size(); i++){
+                                        Cost cost = new Cost();
+                                        cost.setId(RealmController.getInstance().getCostObject().size()+i+1+ System.currentTimeMillis());
+                                        cost.setSourceName(editName.getText().toString());
+                                        cost.setDestinationName(warehouseDestinations.get(i).getDestinationName());
+                                        cost.setCost(0);
+                                        costArrayList.add(cost);
+                                    }
+
+                                    for (Cost cost1 : costArrayList) {
+                                        // Persist your data easily
+                                        realm.beginTransaction();
+                                        realm.copyToRealm(cost1);
+                                        realm.copyToRealmOrUpdate(cost1);
+                                        realm.commitTransaction();
+                                    }
                                 }
                             }
                         })
