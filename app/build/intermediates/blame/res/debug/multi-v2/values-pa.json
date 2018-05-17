@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\File\\SM 4\\Sistem Pendukung Keputusan\\SPK-Transportasi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
+            "outputFile": "D:\\Android\\Kuliah\\SPK\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ed0a4c34d27362208915901d6a135553\\res\\values-pa\\values-pa.xml",
+                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\61bdc0ef2dd17a711ae837321c871939\\res\\values-pa\\values-pa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Fatkhun\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5ae36f681e536a3b4bd9cf4beae05535\\res\\values-pa\\values-pa.xml",
+                    "source": "C:\\Users\\Bahroel\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d71aa8cb562821a1f14776334ff32a4a\\res\\values-pa\\values-pa.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

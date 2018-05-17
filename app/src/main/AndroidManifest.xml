@@ -16,18 +16,21 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".DestinationActivity"
             android:label="@string/title_activity_destination"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".CostActivity" />
-        <activity android:name=".GenerateActivity"></activity>
+        <activity android:name=".GenerateActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
