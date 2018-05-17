@@ -66,6 +66,7 @@
                         android:id="@+id/tvinputdataasal"
                         android:layout_width="wrap_content"
                         android:text="Input Data Asal"
+                        android:textSize="17dp"
                         android:textStyle="bold"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -97,6 +98,7 @@
                         android:layout_width="wrap_content"
                         android:text="Input Data Tujuan"
                         android:textStyle="bold"
+                        android:textSize="17dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
@@ -138,6 +140,7 @@
                         android:layout_width="wrap_content"
                         android:textStyle="bold"
                         android:text="Biaya"
+                        android:textSize="17dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
@@ -167,6 +170,7 @@
                         android:id="@+id/tvgeneratedata"
                         android:layout_width="wrap_content"
                         android:textStyle="bold"
+                        android:textSize="17dp"
                         android:text="Generate Data"
                         android:layout_height="wrap_content" />
                 </LinearLayout>

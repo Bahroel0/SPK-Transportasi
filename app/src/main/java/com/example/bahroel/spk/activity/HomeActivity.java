@@ -57,6 +57,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN, android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 //        viewPager = (ViewPager)findViewById(R.id.viewPager);
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipperSource);

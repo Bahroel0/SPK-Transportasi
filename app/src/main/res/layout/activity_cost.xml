@@ -26,38 +26,43 @@
             android:id="@+id/toolbar_title" />
 
     </android.support.v7.widget.Toolbar>
-    <RelativeLayout
-        android:layout_below="@+id/toolbar_top"
-        android:id="@+id/relative"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/imgbayar"
-            android:layout_width="match_parent"
-            android:src="@drawable/bayar"
-            android:layout_height="110dp" />
-        <TextView
-            android:id="@+id/tvbiayatrafic"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/imgbayar"
-            android:layout_width="wrap_content"
-            android:text="Biaya Traffic :"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
-        android:id="@+id/linearLayoutBayar"
-        android:layout_below="@+id/relative"
         android:orientation="vertical"
+        android:layout_below="@+id/toolbar_top"
+        android:id="@+id/LineLayout"
         android:layout_width="match_parent"
-        android:layout_height="280dp">
-        <include layout="@layout/content_bayar" />
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgbayar"
+                android:layout_width="match_parent"
+                android:src="@drawable/bayar"
+                android:layout_marginTop="5dp"
+                android:layout_height="115dp" />
+            <TextView
+                android:id="@+id/tvbiayatrafic"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/imgbayar"
+                android:layout_width="wrap_content"
+                android:text="Biaya Trafik"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
+
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/LineLayout"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/content_bayar" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

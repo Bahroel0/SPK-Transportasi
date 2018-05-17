@@ -44,6 +44,9 @@ public class CostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cost);
+
+        getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN, android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
         recycler = (RecyclerView)findViewById(R.id.recyclerbayar);
