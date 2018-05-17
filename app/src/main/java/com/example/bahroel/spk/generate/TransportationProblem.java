@@ -25,7 +25,7 @@ public class TransportationProblem {
         this.costArrayList = costArrayList;
 
         for(int i=0; i < (getWarehouseSourceArrayList().size()*getWarehouseDestinationArrayList().size()-1); i++)
-            feasible.add(new Variable(warehouseSourceArrayList.get(0),warehouseDestinationArrayList.get(0),costArrayList.get(0),0));
+            feasible.add(new Variable());
     }
 
 
@@ -65,60 +65,57 @@ public class TransportationProblem {
         int k = 0;
 
         Variable minCost = new Variable();
-        while (k < getWarehouseSourceArrayList().size() * getWarehouseDestinationArrayList().size() - 1) {
+        while (k < getWarehouseSourceArrayList().size()*getWarehouseDestinationArrayList().size()-1) {
             minCost.setBiaya(RealmController.getInstance().getCostObject().get(k));
-
-            for (int m = 0; m < costArrayList.size() - 1; m++) {
-                if (!RealmController.getInstance().getCostObject().get(m).isIsset()) {
-                    if (minCost.getBiaya().getCost() > RealmController.getInstance().getCostObject().get(m).getCost()) {
-                        minCost.setBiaya(RealmController.getInstance().getCostObject().get(m));
+            for (int i=0; i<costArrayList.size(); i++){
+                if (!RealmController.getInstance().getCostObject().get(i).isIsset()){
+                    if (minCost.getBiaya().getCost() > RealmController.getInstance().getCostObject().get(i).getCost()) {
+                        minCost.setBiaya(RealmController.getInstance().getCostObject().get(i));
                     }
                 }
-
-
-                WarehouseSource source = RealmController.getInstance().getwhsource(minCost.getBiaya().getSourceName());
-                WarehouseDestination desti = RealmController.getInstance().getwhdestination(minCost.getBiaya().getDestinationName());
-                minCost.setSource(source);
-                minCost.setDesti(desti);
-                int min = Math.min(Integer.valueOf(source.getSourceAmount()), Integer.valueOf(desti.getDestinationAmount()));
-
-                feasible.get(k).setJumlah(min);
-                feasible.get(k).setBiaya(minCost.getBiaya());
-                feasible.get(k).setSource(minCost.getSource());
-                feasible.get(k).setDesti(minCost.getDesti());
-
-                Realm realm = RealmController.getInstance().getRealm();
-                realm.beginTransaction();
-                source.setSourceAmount(String.valueOf(Integer.valueOf(minCost.getSource().getSourceAmount()) - min));
-                desti.setDestinationAmount(String.valueOf(Integer.valueOf(minCost.getDesti().getDestinationAmount()) - min));
-                realm.commitTransaction();
-
-                k++;
-
-
-                if (Integer.valueOf(source.getSourceAmount()) == 0 || Integer.valueOf(desti.getDestinationAmount()) == 0) {
-                    if (Integer.valueOf(source.getSourceAmount()) == 0) {
-                        for (int x = 0; x < costArrayList.size() - 1; x++) {
-                            if (RealmController.getInstance().getCostObject().get(x).getSourceName().equals(source.getSourceName())) {
-                                realm.beginTransaction();
-                                RealmController.getInstance().getCostObject().get(x).setIsset(true);
-                                realm.commitTransaction();
-                            }
-                        }
-                    } else if (Integer.valueOf(desti.getDestinationAmount()) == 0) {
-                        for (int x = 0; x < costArrayList.size() - 1; x++) {
-                            if (RealmController.getInstance().getCostObject().get(x).getDestinationName().equals(desti.getDestinationName())) {
-                                realm.beginTransaction();
-                                RealmController.getInstance().getCostObject().get(x).setIsset(true);
-                                realm.commitTransaction();
-                            }
-                        }
-                    }
-                }
-
             }
+            WarehouseSource source = RealmController.getInstance().getwhsource(minCost.getBiaya().getSourceName());
+            WarehouseDestination desti = RealmController.getInstance().getwhdestination(minCost.getBiaya().getDestinationName());
+            minCost.setSource(source);
+            minCost.setDesti(desti);
+
+            int min = Math.min(Integer.valueOf(source.getSourceAmount()), Integer.valueOf(desti.getDestinationAmount()));
+
+            feasible.get(k).setJumlah(min);
+            feasible.get(k).setBiaya(minCost.getBiaya());
+            feasible.get(k).setSource(minCost.getSource());
+            feasible.get(k).setDesti(minCost.getDesti());
+
+            Realm realm = RealmController.getInstance().getRealm();
+            realm.beginTransaction();
+            source.setSourceAmount(String.valueOf(Integer.valueOf(minCost.getSource().getSourceAmount()) - min));
+            desti.setDestinationAmount(String.valueOf(Integer.valueOf(minCost.getDesti().getDestinationAmount()) - min));
+            realm.commitTransaction();
+
+            if (Integer.valueOf(source.getSourceAmount()) == 0 || Integer.valueOf(desti.getDestinationAmount()) == 0) {
+                if (Integer.valueOf(source.getSourceAmount()) == 0) {
+                    for (int x = 0; x < costArrayList.size(); x++) {
+                        if (RealmController.getInstance().getCostObject().get(x).getSourceName().equals(source.getSourceName())) {
+                            realm.beginTransaction();
+                            RealmController.getInstance().getCostObject().get(x).setIsset(true);
+                            realm.commitTransaction();
+                        }
+                    }
+                } else if (Integer.valueOf(desti.getDestinationAmount()) == 0) {
+                    for (int x = 0; x < costArrayList.size(); x++) {
+                        if (RealmController.getInstance().getCostObject().get(x).getDestinationName().equals(desti.getDestinationName())) {
+                            realm.beginTransaction();
+                            RealmController.getInstance().getCostObject().get(x).setIsset(true);
+                            realm.commitTransaction();
+                        }
+                    }
+                }
+            }
+            k++;
         }
+
         return feasible;
+
     }
 
         public int getResultGenerate () {

@@ -68,13 +68,15 @@ public class GenerateActivity extends AppCompatActivity {
         ArrayList<Generate> generateArrayList = new ArrayList<>();
 
         for(int j=0; j< variables.size(); j++){
-            Generate generate = new Generate();
-            generate.setId(RealmController.getInstance().getGenerates().size()+1+j + System.currentTimeMillis());
-            generate.setSrcName(variables.get(j).getSource().getSourceName());
-            generate.setDstName(variables.get(j).getDesti().getDestinationName());
-            generate.setCostValue(variables.get(j).getBiaya().getCost());
-            generate.setAmount(String.valueOf(variables.get(j).getJumlah()));
-            generateArrayList.add(generate);
+            if(variables.get(j).getJumlah() != 0){
+                Generate generate = new Generate();
+                generate.setId(RealmController.getInstance().getGenerates().size()+1+j + System.currentTimeMillis());
+                generate.setSrcName(variables.get(j).getSource().getSourceName());
+                generate.setDstName(variables.get(j).getDesti().getDestinationName());
+                generate.setCostValue(variables.get(j).getBiaya().getCost());
+                generate.setAmount(String.valueOf(variables.get(j).getJumlah()));
+                generateArrayList.add(generate);
+            }
 
         }
 
