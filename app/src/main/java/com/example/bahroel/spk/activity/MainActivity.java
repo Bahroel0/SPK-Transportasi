@@ -1,6 +1,7 @@
 package com.example.bahroel.spk.activity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,9 +74,43 @@ public class MainActivity extends AppCompatActivity {
         cvGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cvgrt = new Intent(getApplicationContext(), GenerateActivity.class);
-                cvgrt.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(cvgrt);
+
+                RealmController.getInstance().refresh();
+                int source = RealmController.getInstance().getwhsources().size();
+                int desti = RealmController.getInstance().getwhdestinations().size();
+                int biaya = RealmController.getInstance().getCostObject().size();
+
+                if((source==desti) && source != 0 && desti !=0){
+                    boolean ceknol =false;
+                    for(int i=0; i<source; i++){
+                        if(Integer.valueOf(RealmController.getInstance().getwhsources().get(i).getSourceAmount()) == 0){
+                            ceknol = true;
+                        }
+                    }
+                    for(int i=0; i<desti; i++){
+                        if(Integer.valueOf(RealmController.getInstance().getwhdestinations().get(i).getDestinationAmount()) == 0){
+                            ceknol = true;
+                        }
+                    }
+                    for(int i=0; i<biaya; i++){
+                        if(RealmController.getInstance().getCostObject().get(i).getCost() == 0){
+                            ceknol = true;
+                        }
+                    }
+
+                    if(!ceknol){
+                        Intent cvgrt = new Intent(getApplicationContext(), GenerateActivity.class);
+                        cvgrt.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(cvgrt);
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Jumlah truk, biaya tidak boleh 0!", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "Data Asal dan Tujuan tidak Seimbang atau Tidak ada Data", Toast.LENGTH_SHORT).show();
+                }
+//
             }
         });
 
@@ -101,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RealmController.getInstance().clearAll();
-                Toast.makeText(getApplicationContext(), "Success to delete all data ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Sukses hapus semua data", Toast.LENGTH_SHORT).show();
             }
         });
 

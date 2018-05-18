@@ -19,18 +19,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name="com.example.bahroel.spk.activity.HomeActivity" />
+        <activity
+            android:name="com.example.bahroel.spk.activity.HomeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.bahroel.spk.activity.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.example.bahroel.spk.activity.DestinationActivity"
-            android:label="@string/title_activity_destination"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.bahroel.spk.activity.CostActivity" />
-        <activity android:name="com.example.bahroel.spk.activity.GenerateActivity" />
-        <activity android:name="com.example.bahroel.spk.activity.SplashScreenActivity" >
+        <activity
+            android:name="com.example.bahroel.spk.activity.CostActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.bahroel.spk.activity.GenerateActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.bahroel.spk.activity.SplashScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

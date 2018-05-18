@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 17 23:23:07 ICT 2018
+#Fri May 18 12:55:57 ICT 2018
 7.path=lib/mips/librealm-jni.so
 2.base=F\:\\File\\SM 4\\Sistem Pendukung Keputusan\\SPK-Transportasi\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
 5.set=NATIVE_RESOURCE

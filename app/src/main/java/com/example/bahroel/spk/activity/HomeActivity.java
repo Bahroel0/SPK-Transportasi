@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity {
         // changes will be reflected automatically
         setRealmAdapter(RealmController.with(this).getwhsources());
 
-        Toast.makeText(this, "Press card item for edit, long press to remove item", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Klik untuk edit data, tekan untuk hapus", Toast.LENGTH_LONG).show();
         fabmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,8 +112,8 @@ public class HomeActivity extends AppCompatActivity {
                                 warehouseSource.setSourceName(editName.getText().toString());
                                 warehouseSource.setSourceAmount(editAmount.getText().toString());
 
-                                if (editName.getText() == null || editName.getText().toString().equals("") || editName.getText().toString().equals(" ")) {
-                                    Toast.makeText(HomeActivity.this, "Entry not saved, missing name", Toast.LENGTH_SHORT).show();
+                                if (editName.getText() == null || editName.getText().toString().isEmpty() || editName.getText().toString().equals(" ")||editAmount.getText().toString().isEmpty()) {
+                                    Toast.makeText(HomeActivity.this, "Data tidak boleh kosong", Toast.LENGTH_SHORT).show();
                                 } else {
                                     // Persist your data easily
                                     realm.beginTransaction();
